@@ -8,9 +8,9 @@ export async function detectBrowser(): Promise<'chrome' | 'firefox' | 'firefox-m
 	const userAgent = navigator.userAgent.toLowerCase();
 	
 	// Check for Orion first since it's based on WebKit/Safari
-	if ('KAGI' in window) {
-		return 'orion';
-	}
+	// if ('KAGI' in window) {
+	// 	return 'orion';
+	// }
 	
 	if (userAgent.includes('firefox')) {
 		return userAgent.includes('mobile') ? 'firefox-mobile' : 'firefox';
